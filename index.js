@@ -57,7 +57,7 @@ async function promptUser() {
         const SvgMarkup = `
         <svg version="1.1" xm1ns="http://www.w3.org/2000/svg" width="300" height="200">
             <rect x="0" y="0" width="300" height="200" fill="${shapeColor}" />
-            <text x="150" y="100" fill="${textColor}" text-anchor="middle">${text}</text>
+            <text x="150" y="100" fill="${textColor}" text-anchor="middle" alignment-baseline="middle">${text}</text>
         </svg>
         `;
         //return svg markup
