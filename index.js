@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 //shape options
-const shapeOptions = ['circle', 'triangle', 'square'];
+const shapes = ['circle', 'triangle', 'square'];
 
 //User Input
 async function promptUser() {
@@ -28,7 +28,7 @@ async function promptUser() {
                 type: 'list',
                 name: 'shape',
                 message: 'choose a shape',
-                choices: shapeOptions,
+                choices: shapes,
             },
             {
                 type: 'input',
@@ -51,7 +51,7 @@ async function promptUser() {
    
 
     function generateSvgMarkup(answers) {
-        const { text, textColor, shape, shapeColor } = answers;
+        const { text, textColor, shapes, shapeColor } = answers;
 
         // create svg markup
         const SvgMarkup = `
@@ -64,5 +64,4 @@ async function promptUser() {
         return SvgMarkup;
     }
 
-    //call promptUser to start
-    promptUser();
+    
